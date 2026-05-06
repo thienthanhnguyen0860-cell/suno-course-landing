@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* BENEFITS */}
-      <section className="px-6 py-28">
+      <section id="benefits" className="px-6 py-28">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-4xl font-black md:text-6xl">
             Sau khóa học bạn sẽ có gì?
@@ -255,7 +255,7 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="px-6 py-28">
+      <section id="faq" className="px-6 py-28">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-4xl font-black md:text-6xl">
             Học viên nói gì?
