@@ -191,9 +191,7 @@ export default function Home() {
 
             <h3 className="mt-6 text-xl font-black">{item.title}</h3>
 
-            <p className="mt-3 text-sm text-white/60">
-              Bấm để xem chi tiết
-            </p>
+            
           </summary>
 
           <div className="mt-5 border-t border-white/10 pt-5">
