@@ -107,96 +107,107 @@ export default function Home() {
       </section>
 
       {/* WORKFLOW */}
-      <section id="workflow" className="px-6 py-28">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="text-4xl font-black md:text-6xl">
-            Workflow từ ý tưởng đến bài hát
-          </h2>
+<section id="workflow" className="px-6 py-28">
+  <div className="mx-auto max-w-7xl">
+    <h2 className="text-4xl font-black md:text-6xl">
+      Workflow từ ý tưởng đến bài hát
+    </h2>
 
-          <img
-            src="/workflow.png"
-            alt="Workflow"
-            className="mt-10 w-full rounded-[2rem] border border-white/10"
-          />
-
-          <div className="mt-14 grid gap-5 md:grid-cols-4">
-           
-          </div>
-        </div>
-      </section>
-{[
-  {
-    step: "01",
-    title: "Chọn niche âm nhạc",
-    desc: "Xác định genre, mood và audience.",
-    icon: "🎵",
-  },
-  {
-    step: "02",
-    title: "Viết idea bài hát",
-    desc: "Tạo concept & hook gây nghiện.",
-    icon: "💡",
-  },
-  {
-    step: "03",
-    title: "Tạo lyric structure",
-    desc: "Verse, chorus, bridge chuyên nghiệp.",
-    icon: "✍️",
-  },
-  {
-    step: "04",
-    title: "Viết prompt Suno",
-    desc: "Prompt tối ưu để AI generate tốt hơn.",
-    icon: "🤖",
-  },
-  {
-    step: "05",
-    title: "Generate nhiều version",
-    desc: "Test nhiều mood & variation.",
-    icon: "🚀",
-  },
-  {
-    step: "06",
-    title: "Chọn bản tốt nhất",
-    desc: "Lọc version có hook mạnh nhất.",
-    icon: "🎧",
-  },
-  {
-    step: "07",
-    title: "Đóng gói sản phẩm",
-    desc: "Export MP3 + cover + lyric pack.",
-    icon: "📦",
-  },
-  {
-    step: "08",
-    title: "Bán bằng landing page",
-    desc: "Tạo website bán nhạc & prompt.",
-    icon: "💰",
-  },
-].map((item) => (
-  <div
-    key={item.step}
-    className="group rounded-[2rem] border border-white/10 bg-white/5 p-8 transition duration-300 hover:-translate-y-2 hover:border-pink-400/40 hover:bg-white/10"
-  >
-    <div className="flex items-center justify-between">
-      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-300 text-lg font-black text-black">
-        {item.step}
-      </div>
-
-      <div className="text-3xl transition group-hover:scale-125">
-        {item.icon}
-      </div>
-    </div>
-
-    <h3 className="mt-6 text-xl font-black">
-      {item.title}
-    </h3>
-
-    <p className="mt-3 leading-7 text-white/60">
-      {item.desc}
+    <p className="mt-4 max-w-2xl text-white/60">
+      Bấm vào từng bước để xem chi tiết cách tạo nhạc, prompt và đóng gói sản phẩm.
     </p>
+
+    <div className="mt-14 grid grid-flow-col auto-cols-[280px] gap-5 overflow-x-auto pb-6 lg:grid-flow-row lg:grid-cols-4 lg:overflow-visible">
+      {[
+        {
+          step: "01",
+          title: "Chọn niche âm nhạc",
+          desc: "Xác định bạn muốn làm nhạc cho ai: TikTok, YouTube, game, thiền, quảng cáo, phim ngắn hoặc bán beat.",
+          result: "Kết quả: có một thị trường rõ ràng để nhắm tới.",
+          icon: "🎵",
+        },
+        {
+          step: "02",
+          title: "Viết idea bài hát",
+          desc: "Tạo concept bài hát gồm cảm xúc, câu chuyện, bối cảnh và thông điệp chính.",
+          result: "Kết quả: có ý tưởng đủ rõ để viết lyric.",
+          icon: "💡",
+        },
+        {
+          step: "03",
+          title: "Tạo lyric structure",
+          desc: "Sắp xếp lời theo intro, verse, chorus, bridge để bài hát nghe tự nhiên hơn.",
+          result: "Kết quả: có khung lời bài hát dễ đưa vào Suno.",
+          icon: "✍️",
+        },
+        {
+          step: "04",
+          title: "Viết prompt Suno",
+          desc: "Mô tả genre, mood, vocal, tempo, instrument và cảm xúc để Suno tạo đúng phong cách.",
+          result: "Kết quả: có prompt mạnh để generate bài hát.",
+          icon: "🤖",
+        },
+        {
+          step: "05",
+          title: "Generate nhiều version",
+          desc: "Tạo nhiều phiên bản khác nhau để so sánh hook, vocal, mood và chất lượng tổng thể.",
+          result: "Kết quả: có nhiều lựa chọn tốt hơn.",
+          icon: "🚀",
+        },
+        {
+          step: "06",
+          title: "Chọn bản tốt nhất",
+          desc: "Nghe lại, chọn bản có hook mạnh, vocal rõ, mood đúng và dễ dùng cho mục tiêu bán hàng.",
+          result: "Kết quả: chọn được bản nhạc chính.",
+          icon: "🎧",
+        },
+        {
+          step: "07",
+          title: "Đóng gói sản phẩm",
+          desc: "Chuẩn bị audio, cover, lyric, prompt, mô tả sản phẩm và file bonus.",
+          result: "Kết quả: có music pack có thể bán.",
+          icon: "📦",
+        },
+        {
+          step: "08",
+          title: "Bán bằng landing page",
+          desc: "Đưa sản phẩm lên landing page, thêm pricing, FAQ, CTA và form đăng ký.",
+          result: "Kết quả: có trang bán nhạc chuyên nghiệp.",
+          icon: "💰",
+        },
+      ].map((item) => (
+        <details
+          key={item.step}
+          className="group rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:-translate-y-2 hover:border-pink-400/40 hover:bg-white/10"
+        >
+          <summary className="cursor-pointer list-none">
+            <div className="flex items-center justify-between">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-300 text-lg font-black text-black">
+                {item.step}
+              </div>
+
+              <div className="text-3xl">{item.icon}</div>
+            </div>
+
+            <h3 className="mt-6 text-xl font-black">{item.title}</h3>
+
+            <p className="mt-3 text-sm text-white/60">
+              Bấm để xem chi tiết
+            </p>
+          </summary>
+
+          <div className="mt-5 border-t border-white/10 pt-5">
+            <p className="leading-7 text-white/70">{item.desc}</p>
+
+            <p className="mt-4 rounded-2xl bg-white/5 p-4 text-sm text-cyan-200">
+              {item.result}
+            </p>
+          </div>
+        </details>
+      ))}
+    </div>
   </div>
-))}
+</section>
       {/* BENEFITS */}
       <section id="benefits" className="px-6 py-28">
         <div className="mx-auto max-w-7xl">
@@ -221,7 +232,7 @@ export default function Home() {
             ].map((item) => (
               <div
                 key={item}
-                className="rounded-[2rem] border border-white/10 bg-white/5 p-8"
+                className="rounded-[2rem] border border-white/10 bg-white/5 p-10"
               >
                 <div className="mb-5 text-3xl">✨</div>
 
