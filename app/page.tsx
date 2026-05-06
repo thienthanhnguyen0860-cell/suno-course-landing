@@ -35,7 +35,7 @@ export default function Home() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative px-6 pt-36 pb-28">
+      <section id="top" className="relative px-6 pt-36 pb-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,#9333ea55,transparent_30%),radial-gradient(circle_at_80%_20%,#06b6d455,transparent_30%),radial-gradient(circle_at_50%_80%,#ec489955,transparent_30%)]" />
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
@@ -287,7 +287,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="px-6 py-28">
+      <section id="benefits" className="px-6 py-28">
         <div className="mx-auto max-w-4xl">
           <h2 className="text-4xl font-black md:text-6xl">FAQ</h2>
 
