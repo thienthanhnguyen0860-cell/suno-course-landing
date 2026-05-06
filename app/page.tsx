@@ -120,31 +120,83 @@ export default function Home() {
           />
 
           <div className="mt-14 grid gap-5 md:grid-cols-4">
-            {[
-              "Chọn niche âm nhạc",
-              "Viết idea bài hát",
-              "Tạo lyric structure",
-              "Viết prompt Suno",
-              "Generate nhiều version",
-              "Chọn bản tốt nhất",
-              "Đóng gói sản phẩm",
-              "Bán bằng landing page",
-            ].map((step, index) => (
-              <div
-                key={step}
-                className="rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-pink-400/40"
-              >
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-300 text-xl font-black text-black">
-                  0{index + 1}
-                </div>
-
-                <p className="font-semibold text-white/85">{step}</p>
-              </div>
-            ))}
+           
           </div>
         </div>
       </section>
+{[
+  {
+    step: "01",
+    title: "Chọn niche âm nhạc",
+    desc: "Xác định genre, mood và audience.",
+    icon: "🎵",
+  },
+  {
+    step: "02",
+    title: "Viết idea bài hát",
+    desc: "Tạo concept & hook gây nghiện.",
+    icon: "💡",
+  },
+  {
+    step: "03",
+    title: "Tạo lyric structure",
+    desc: "Verse, chorus, bridge chuyên nghiệp.",
+    icon: "✍️",
+  },
+  {
+    step: "04",
+    title: "Viết prompt Suno",
+    desc: "Prompt tối ưu để AI generate tốt hơn.",
+    icon: "🤖",
+  },
+  {
+    step: "05",
+    title: "Generate nhiều version",
+    desc: "Test nhiều mood & variation.",
+    icon: "🚀",
+  },
+  {
+    step: "06",
+    title: "Chọn bản tốt nhất",
+    desc: "Lọc version có hook mạnh nhất.",
+    icon: "🎧",
+  },
+  {
+    step: "07",
+    title: "Đóng gói sản phẩm",
+    desc: "Export MP3 + cover + lyric pack.",
+    icon: "📦",
+  },
+  {
+    step: "08",
+    title: "Bán bằng landing page",
+    desc: "Tạo website bán nhạc & prompt.",
+    icon: "💰",
+  },
+].map((item) => (
+  <div
+    key={item.step}
+    className="group rounded-[2rem] border border-white/10 bg-white/5 p-8 transition duration-300 hover:-translate-y-2 hover:border-pink-400/40 hover:bg-white/10"
+  >
+    <div className="flex items-center justify-between">
+      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-300 text-lg font-black text-black">
+        {item.step}
+      </div>
 
+      <div className="text-3xl transition group-hover:scale-125">
+        {item.icon}
+      </div>
+    </div>
+
+    <h3 className="mt-6 text-xl font-black">
+      {item.title}
+    </h3>
+
+    <p className="mt-3 leading-7 text-white/60">
+      {item.desc}
+    </p>
+  </div>
+))}
       {/* BENEFITS */}
       <section id="benefits" className="px-6 py-28">
         <div className="mx-auto max-w-7xl">
